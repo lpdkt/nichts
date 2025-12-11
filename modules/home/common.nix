@@ -54,6 +54,12 @@
       withOpenASAR = true;
     })
 
+    # nix cli
+    statix
+    nixfmt
+    treefmt
+    deadnix
+
     # cli
     python3
     docker

@@ -1,4 +1,3 @@
-{ pkgs, ... }:
 {
   programs = {
     thunderbird = {
@@ -10,12 +9,36 @@
     };
   };
 
-  services.protonmail-bridge = {
-    enable = true;
-  };
+  accounts.email.accounts = {
+    "mail@lpdkt.xyz" = {
+      realName = "lpdkt";
+      address = "mail@lpdkt.xyz";
+      userName = "mail@lpdkt.xyz";
+      thunderbird.enable = true;
+      primary = true;
+      imap = {
+        host = "imap.migadu.com";
+        port = 993;
+      };
+      smtp = {
+        host = "smtp.migadu.com";
+        port = 465;
+      };
+    };
 
-  home.packages = with pkgs; [
-    pass
-    gnome-keyring
-  ];
+    "leroy@traebert.de" = {
+      realName = "Leroy Traebert";
+      address = "leroy@traebert.de";
+      userName = "leroy@traebert.de";
+      thunderbird.enable = true;
+      imap = {
+        host = "imap.strato.de";
+        port = 993;
+      };
+      smtp = {
+        host = "smtp.strato.de";
+        port = 465;
+      };
+    };
+  };
 }

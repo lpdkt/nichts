@@ -1,7 +1,6 @@
 {
   pkgs,
   inputs,
-  lib,
   ...
 }:
 {
@@ -237,9 +236,4 @@
       };
     };
   };
-
-  home.packages = with pkgs; [
-    nixfmt
-    nixfmt-tree
-  ];
 }
