@@ -49,10 +49,7 @@
     bitwarden-desktop
     keepassxc
     signal-desktop
-    (discord.override {
-      withVencord = true;
-      withOpenASAR = true;
-    })
+    vesktop
 
     # nix cli
     statix

@@ -40,12 +40,12 @@
         vim = "nvim";
         media = "cd /mnt/media/";
         music = "cd /mnt/media/music";
-        conf = "cd ~/dronevil";
+        conf = "cd ~/nichts";
         ".." = "cd ..";
         "..." = "cd ../..";
         "...." = "cd ../../..";
         dev = "nix develop --impure -c \"$SHELL\"";
-        rebuild = "sudo nixos-rebuild switch --flake ~/dronevil#${hostName}";
+        rebuild = "sudo nixos-rebuild switch --flake ~/nichts#${hostName}";
       };
 
     profileExtra = ''

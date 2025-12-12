@@ -3,8 +3,8 @@
     enable = true;
     settings = {
       splash = false;
-      preload = [ "~/dronevil/modules/home/desktop/hyprland/wallpaper/nixflake.png" ];
-      wallpaper = [ ",~/dronevil/modules/home/desktop/hyprland/wallpaper/nixflake.png" ];
+      preload = [ "~/nichts/modules/home/desktop/hyprland/wallpaper/nixflake.png" ];
+      wallpaper = [ ",~/nichts/modules/home/desktop/hyprland/wallpaper/nixflake.png" ];
     };
   };
 }
