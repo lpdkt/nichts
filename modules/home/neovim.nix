@@ -128,6 +128,21 @@
           codeAction = "<leader>ca";
           signatureHelp = "<C-h";
         };
+
+        servers = {
+          nixd.settings.nixd.options =
+            let
+              flake = ''(builtins.getFlake "/home/leroy/nichts")'';
+            in
+            {
+              nixos = {
+                expr = "${flake}.nixosConfigurations.noise.options";
+              };
+              home_manager = {
+                expr = "${flake}.nixosConfigurations.noise.options.home-manager.users.type.getSubOptions []";
+              };
+            };
+        };
       };
 
       languages = {

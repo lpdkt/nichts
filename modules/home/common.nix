@@ -38,7 +38,6 @@
 
     # gui
     calibre
-    anki
     gimp
     qbittorrent
     koreader

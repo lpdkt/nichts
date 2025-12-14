@@ -10,12 +10,7 @@ let
     text = ''
       dir="$HOME/pictures/sc"
       filename="screenshot-$(date +'%Y-%m-%d_%H-%M-%S').png"
-
-      if [ "$1" = "select" ]; then 
-        grim -g "$(slurp)" - | tee "$dir/$filename" | wl-copy
-      else 
-        grim - | tee "$dir/$filename" | wl-copy
-      fi
+      grim -g "$(slurp)" - | tee "$dir/$filename" | wl-copy
     '';
   };
 in
