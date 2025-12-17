@@ -4,7 +4,7 @@ let
     if [[ $# -eq 1 ]]; then
       selected=$1
     else
-      selected=$(find ~/ ~/bin ~/code/** ~/documents/notes /mnt/media -mindepth 1 -maxdepth 1 -type d ! -name ".*" | fzf)
+      selected=$(find ~/ ~/bin ~/code/** ~/documents ~/documents/notes /mnt/media -mindepth 1 -maxdepth 1 -type d ! -name ".*" | fzf)
     fi
 
     if [[ -z $selected ]]; then

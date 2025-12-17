@@ -49,6 +49,8 @@
     keepassxc
     signal-desktop
     vesktop
+    bottles
+    localsend
 
     # nix cli
     statix

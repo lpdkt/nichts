@@ -17,12 +17,15 @@ in
 {
   wayland.systemd.target = "river-session.target";
 
-  home.packages = [ screenshot ];
+  home.packages =
+    (with pkgs; [
+      river-bsp-layout
+    ])
+    ++ [ screenshot ];
 
   wayland.windowManager.river = {
     enable = true;
 
-    systemd.variables = [ "--all" ];
     extraSessionVariables = {
       XDG_CURRENT_DESKTOP = "river";
       XDG_SESSION_DESKTOP = "river";
@@ -32,20 +35,18 @@ in
     settings =
       with lib;
       let
-        terminal = "foot";
-        browser = "librewolf";
         numTags = 9;
         listToAttrSet = list: listToAttrs (imap (i: nameValuePair (toString i)) list);
         tagMap = foldl' (x: _: x ++ [ (last x * 2) ]) [ 1 ] (genList (_: [ 1 ]) (numTags - 1));
         tagMapStrSet = listToAttrSet (map toString tagMap);
       in
       {
-        default-layout = "bsp-layout";
         spawn = [
           "setbg"
-          "'${lib.getExe pkgs.river-bsp-layout} --inner-gap 2 --outer-gap 5 --split-perc 0.5'"
+          "'river-bsp-layout --inner-gap 2 --outer-gap 5 --split-perc 0.5'"
         ];
 
+        default-layout = "bsp-layout";
         keyboard-layout = "-options caps:escape eu";
 
         border-width = 2;
@@ -53,8 +54,8 @@ in
         border-color-unfocused = "0x414868";
         background-color = "0x24283B";
 
-        focus-follows-cursor = "always";
-        set-repeat = "30 250";
+        focus-follows-cursor = "normal";
+        set-repeat = "35 200";
 
         map = {
           normal =
@@ -64,12 +65,12 @@ in
               "Super+Control ${index}" = "toggle-focused-tags ${tag}";
             }) tagMapStrSet)
             // {
-              "Super Return" = "spawn ${terminal}";
+              "Super Return" = "spawn foot";
               "Super Q" = "close";
-              "Super F" = "spawn ${browser}";
+              "Super F" = "spawn librewolf";
               "Super D" = "spawn fuzzel";
               "Super E" = "spawn thunar";
-              "Super+Shift E" = "spawn '${terminal} -e yazi'";
+              "Super+Shift E" = "spawn 'foot -e yazi'";
               "Super P" = "spawn pavucontrol";
               "Super Period" = "spawn 'pamixer --default-source -t'"; # mute mic
               "Super+Shift Period" = "spawn 'pamixer -t'"; # mute sound
@@ -79,7 +80,7 @@ in
               "Super F10" = "spawn 'playerctl volume 0.05-'";
               "Super F11" = "spawn 'playerctl volume 0.05+'";
               "Super F12" = "spawn 'playerctl stop'";
-              "Super M" = "spawn '${terminal} -e rmpc'";
+              "Super M" = "spawn 'foot -e rmpc'";
               "Super Y" = "spawn ytmpv";
               "Super+Shift Y" = "spawn ytdl";
               "Super+Alt Y" = "spawn ytmpvsearch";
