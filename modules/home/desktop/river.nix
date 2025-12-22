@@ -55,7 +55,7 @@ in
         background-color = "0x24283B";
 
         focus-follows-cursor = "normal";
-        set-repeat = "35 200";
+        set-repeat = "30 250";
 
         map = {
           normal =
@@ -70,10 +70,9 @@ in
               "Super F" = "spawn librewolf";
               "Super D" = "spawn fuzzel";
               "Super E" = "spawn thunar";
-              "Super+Shift E" = "spawn 'foot -e yazi'";
               "Super P" = "spawn pavucontrol";
-              "Super Period" = "spawn 'pamixer --default-source -t'"; # mute mic
-              "Super+Shift Period" = "spawn 'pamixer -t'"; # mute sound
+              "Super I" = "spawn 'pamixer --default-source -t'"; # mute mic
+              "Super O" = "spawn 'pamixer -t'"; # mute sound
               "Super F7" = "spawn 'playerctl previous'";
               "Super F8" = "spawn 'playerctl next'";
               "Super F9" = "spawn 'playerctl play-pause'";
@@ -84,10 +83,9 @@ in
               "Super Y" = "spawn ytmpv";
               "Super+Shift Y" = "spawn ytdl";
               "Super+Alt Y" = "spawn ytmpvsearch";
-              "Super+Shift Comma" = "spawn 'mullvad connect'";
-              "Super+Alt Comma" = "spawn 'mullvad disconnect'";
-              "Super+Alt S" = "spawn screenshot";
-              "Super+Shift S" = "spawn 'screenshot select'";
+              "Super+Shift Period" = "spawn 'mullvad connect'";
+              "Super+Alt Period" = "spawn 'mullvad disconnect'";
+              "Super+Shift S" = "spawn screenshot";
 
               "Super V" = "toggle-float";
               "Super H" = "focus-view left";

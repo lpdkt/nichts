@@ -112,17 +112,16 @@
 
       lsp = {
         enable = true;
-        formatOnSave = true;
         mappings = {
           format = "<leader>lf";
           hover = "K";
+          openDiagnosticFloat = "<leader>k";
           goToDefinition = "gd";
           goToDeclaration = "gD";
           listImplementations = "gi";
           listReferences = "gr";
           nextDiagnostic = "[d";
           previousDiagnostic = "]d";
-          openDiagnosticFloat = "<leader>vd";
           renameSymbol = "<leader>rn";
           listWorkspaceSymbols = "<leader>ws";
           codeAction = "<leader>ca";
@@ -190,20 +189,13 @@
         sources = {
           "nvim_lsp" = "[LSP]";
         };
-      };
 
-      diagnostics = {
-        enable = true;
-        config = {
-          virtual_text = true;
-          float = {
-            focusable = false;
-            style = "minimal";
-            border = "rounded";
-            source = "always";
-            header = "";
-            prefix = "";
-          };
+        mappings = {
+          confirm = "<CR>";
+          next = "<C-n>";
+          previous = "<C-p>";
+          complete = "<C-Space>";
+          close = "<C-e>";
         };
       };
 
@@ -233,6 +225,7 @@
 
       statusline.lualine.enable = true;
       comments.comment-nvim.enable = true;
+      autopairs.nvim-autopairs.enable = true;
 
       utility.oil-nvim.enable = true;
 
