@@ -48,9 +48,9 @@
         ./../../modules/home/imv.nix
         ./../../modules/home/mpv.nix
         ./../../modules/home/neovim.nix
-        ./../../modules/home/xdg.nix
         ./../../modules/home/starship.nix
         ./../../modules/home/tmux.nix
+        ./../../modules/home/xdg.nix
         ./../../modules/home/yazi.nix
         ./../../modules/home/zathura.nix
         ./../../modules/home/zsh.nix

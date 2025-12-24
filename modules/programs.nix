@@ -7,5 +7,9 @@
       flake = "/home/leroy/nichts";
     };
     dconf.enable = true;
+    localsend = {
+      enable = true;
+      openFirewall = true;
+    };
   };
 }
