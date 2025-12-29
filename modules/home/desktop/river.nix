@@ -67,27 +67,26 @@ in
             // {
               "Super Return" = "spawn foot";
               "Super Q" = "close";
-              "Super F" = "spawn librewolf";
+              "Super W" = "spawn firefox";
               "Super D" = "spawn fuzzel";
               "Super E" = "spawn thunar";
               "Super P" = "spawn pavucontrol";
-              "Super I" = "spawn 'pamixer --default-source -t'"; # mute mic
-              "Super O" = "spawn 'pamixer -t'"; # mute sound
-              "Super F7" = "spawn 'playerctl previous'";
-              "Super F8" = "spawn 'playerctl next'";
+              "Super Comma" = "spawn 'pamixer --default-source -t'"; # mute mic
+              "Super+Shift Comma" = "spawn 'pamixer -t'"; # mute sound
               "Super F9" = "spawn 'playerctl play-pause'";
-              "Super F10" = "spawn 'playerctl volume 0.05-'";
-              "Super F11" = "spawn 'playerctl volume 0.05+'";
+              "Super F10" = "spawn 'playerctl previous'";
+              "Super F11" = "spawn 'playerctl next'";
               "Super F12" = "spawn 'playerctl stop'";
               "Super M" = "spawn 'foot -e rmpc'";
               "Super Y" = "spawn ytmpv";
               "Super+Shift Y" = "spawn ytdl";
               "Super+Alt Y" = "spawn ytmpvsearch";
-              "Super+Shift Period" = "spawn 'mullvad connect'";
-              "Super+Alt Period" = "spawn 'mullvad disconnect'";
+              "Super Period" = "spawn 'mullvad connect'";
+              "Super+Shift Period" = "spawn 'mullvad disconnect'";
               "Super+Shift S" = "spawn screenshot";
 
               "Super V" = "toggle-float";
+              "Super F " = "toggle-fullscreen";
               "Super H" = "focus-view left";
               "Super J" = "focus-view down";
               "Super K" = "focus-view up";

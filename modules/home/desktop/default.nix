@@ -18,7 +18,7 @@
     xfce.thunar
     xfce.thunar-volman
     xfce.tumbler
-    xfce.xfconf
+    xfconf
     ffmpegthumbnailer
     libnotify
     gnome-keyring

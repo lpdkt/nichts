@@ -44,11 +44,9 @@
     libreoffice
     nicotine-plus
     picard
-    puddletag
     bitwarden-desktop
     keepassxc
     signal-desktop
-    vesktop
 
     # nix cli
     statix

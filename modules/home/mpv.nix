@@ -3,9 +3,9 @@
     enable = true;
 
     config = {
-      volume = 65;
+      volume = 60;
       ytdl-format = "bestvideo+bestaudio/best";
-      ytdl-raw-options = "sub-lang=en,write-subs=,embed-subs=,cookies-from-browser=firefox:$\{HOME}\/.librewolf/";
+      ytdl-raw-options = "sub-lang=en,write-subs=,embed-subs=,cookies-from-browser=firefox";
       slang = "en,eng";
       gpu-context = "wayland";
     };
