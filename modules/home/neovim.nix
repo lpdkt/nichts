@@ -174,15 +174,18 @@
         };
       };
 
-      treesitter.grammars = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
-        json
-        toml
-        yaml
-        make
-        diff
-        regex
-        ini
-      ];
+      treesitter = {
+        autotagHtml = true;
+        grammars = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
+          json
+          toml
+          yaml
+          make
+          diff
+          regex
+          ini
+        ];
+      };
 
       autocomplete.nvim-cmp = {
         enable = true;

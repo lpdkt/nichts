@@ -9,7 +9,6 @@
     enableOnBoot = true;
   };
 
-  programs.adb.enable = true;
   users.users.leroy.extraGroups = [
     "docker"
     "adbusers"

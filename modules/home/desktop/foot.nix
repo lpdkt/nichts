@@ -30,10 +30,6 @@
         bright6 = "7dcfff";
         bright7 = "c0caf5";
       };
-
-      key-bindings = {
-        fullscreen = "F11";
-      };
     };
   };
 }

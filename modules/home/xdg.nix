@@ -23,7 +23,7 @@
             browser = "firefox.desktop";
             video-player = "mpv.desktop";
             image-viewer = "imv-dir.desktop";
-            music-player = "deadbeef.desktop";
+            music-player = "mpv.desktop";
           in
           {
             "application/pdf" = [ "org.pwmt.zathura-pdf-mupdf.desktop" ];

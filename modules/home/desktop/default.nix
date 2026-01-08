@@ -15,9 +15,9 @@
   services.network-manager-applet.enable = true;
 
   home.packages = with pkgs; [
-    xfce.thunar
-    xfce.thunar-volman
-    xfce.tumbler
+    thunar
+    thunar-volman
+    tumbler
     xfconf
     ffmpegthumbnailer
     libnotify

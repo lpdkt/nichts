@@ -46,7 +46,6 @@
     picard
     bitwarden-desktop
     keepassxc
-    signal-desktop
 
     # nix cli
     statix
