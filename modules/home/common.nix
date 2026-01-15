@@ -46,6 +46,7 @@
     picard
     bitwarden-desktop
     keepassxc
+    vesktop
 
     # nix cli
     statix
