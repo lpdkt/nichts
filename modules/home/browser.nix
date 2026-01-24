@@ -11,5 +11,8 @@
     };
   };
 
-  home.packages = with pkgs; [ ungoogled-chromium ];
+  home.packages = with pkgs; [
+    ungoogled-chromium
+    tor-browser
+  ];
 }

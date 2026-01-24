@@ -1,3 +1,15 @@
+let
+  migadu = {
+    imap = {
+      host = "imap.migadu.com";
+      port = 993;
+    };
+    smtp = {
+      host = "smtp.migadu.com";
+      port = 465;
+    };
+  };
+in
 {
   programs = {
     thunderbird = {
@@ -10,35 +22,19 @@
   };
 
   accounts.email.accounts = {
-    "mail@lpdkt.xyz" = {
+    "mail@lpdkt.xyz" = migadu // {
       realName = "lpdkt";
       address = "mail@lpdkt.xyz";
       userName = "mail@lpdkt.xyz";
       thunderbird.enable = true;
       primary = true;
-      imap = {
-        host = "imap.migadu.com";
-        port = 993;
-      };
-      smtp = {
-        host = "smtp.migadu.com";
-        port = 465;
-      };
     };
 
-    "leroy@traebert.de" = {
+    "mail@leroytraebert.de" = migadu // {
       realName = "Leroy Traebert";
-      address = "leroy@traebert.de";
-      userName = "leroy@traebert.de";
+      address = "mail@leroytraebert.de";
+      userName = "mail@leroytraebert.de";
       thunderbird.enable = true;
-      imap = {
-        host = "imap.strato.de";
-        port = 993;
-      };
-      smtp = {
-        host = "smtp.strato.de";
-        port = 465;
-      };
     };
   };
 }

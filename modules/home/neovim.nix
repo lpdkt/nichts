@@ -176,6 +176,7 @@
 
       treesitter = {
         autotagHtml = true;
+        addDefaultGrammars = true;
         grammars = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
           json
           toml
