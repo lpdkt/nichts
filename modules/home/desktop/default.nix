@@ -2,12 +2,12 @@
 {
   imports = [
     ./waybar
-    ./hyprlock.nix
+    ./dunst.nix
     ./foot.nix
     ./fuzzel.nix
     ./gammastep.nix
     ./gtk.nix
-    ./mako.nix
+    ./hyprlock.nix
     ./river.nix
     ./swww.nix
   ];

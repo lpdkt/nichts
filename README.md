@@ -15,9 +15,9 @@ shell: `fish + starship` \
 text editor: `neovim` \
 application launcher: `fuzzel` \
 bar: `waybar` \
-browser: `firefox+betterfox` \
+browser: `librewolf` \
 file manager: `yazi & thunar` \
-notifications: `mako` \
+notifications: `dunst` \
 video player: `mpv` \
 image viewer: `imv` \
 pdf viewer: `zathura` \

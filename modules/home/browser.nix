@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  programs.firefox = {
+  programs.librewolf = {
     enable = true;
     policies = {
       DownloadDirectory = "\${home}/downloads";

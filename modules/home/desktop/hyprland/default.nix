@@ -12,7 +12,7 @@
       "$guiFM" = "thunar";
       "$tuiFM" = "yazi";
       "$menu" = "fuzzel";
-      "$browser" = "firefox";
+      "$browser" = "librewolf";
 
       monitor = [ ",preferred,auto,1" ];
 

@@ -67,7 +67,7 @@ in
             // {
               "Super Return" = "spawn foot";
               "Super Q" = "close";
-              "Super W" = "spawn firefox";
+              "Super W" = "spawn librewolf";
               "Super D" = "spawn fuzzel";
               "Super E" = "spawn thunar";
               "Super P" = "spawn pavucontrol";

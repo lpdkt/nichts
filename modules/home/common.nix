@@ -44,8 +44,8 @@
     libreoffice
     nicotine-plus
     picard
-    bitwarden-desktop
     keepassxc
+    obsidian
 
     # nix cli
     statix
