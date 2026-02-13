@@ -10,6 +10,7 @@
       "..." = "cd ../..";
       "...." = "cd ../../..";
       dev = "nix develop --impure -c \"$SHELL\"";
+      nsh = "nix-shell --impure --command \"$SHELL\"";
     };
   };
 }
