@@ -8,28 +8,28 @@
   };
 
   gtk =
-    let
-      # https://codeberg.org/river/wiki#how-do-i-disable-gtk-decorations-e-g-title-bar
-      disableDecorations = {
-        extraConfig = {
-          gtk-dialogs-use-header = false;
-        };
-        extraCss = # css
-          ''
-            /* No (default) title bar on wayland */
-            headerbar.default-decoration {
-              margin-bottom: 50px;
-              margin-top: -100px;
-            }
-
-            /* rm -rf window shadows */
-            window.csd,             /* gtk4? */
-            window.csd decoration { /* gtk3 */
-              box-shadow: none;
-            }
-          '';
-      };
-    in
+    # let
+    #   # https://codeberg.org/river/wiki#how-do-i-disable-gtk-decorations-e-g-title-bar
+    #   disableDecorations = {
+    #     extraConfig = {
+    #       gtk-dialogs-use-header = false;
+    #     };
+    #     extraCss = # css
+    #       ''
+    #         /* No (default) title bar on wayland */
+    #         headerbar.default-decoration {
+    #           margin-bottom: 50px;
+    #           margin-top: -100px;
+    #         }
+    #
+    #         /* rm -rf window shadows */
+    #         window.csd,             /* gtk4? */
+    #         window.csd decoration { /* gtk3 */
+    #           box-shadow: none;
+    #         }
+    #       '';
+    #   };
+    # in
     {
       enable = true;
 
@@ -48,8 +48,8 @@
         size = 10;
       };
 
-      gtk3 = disableDecorations;
-      gtk4 = disableDecorations;
+      # gtk3 = disableDecorations;
+      # gtk4 = disableDecorations;
     };
 
   qt = {

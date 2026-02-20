@@ -1,18 +1,41 @@
 { pkgs, ... }:
+let
+  screenshot = pkgs.writeShellApplication {
+    name = "screenshot";
+    runtimeInputs = with pkgs; [
+      grim
+      slurp
+      wl-clipboard
+    ];
+    text = ''
+      dir="$HOME/pictures/sc"
+      filename="screenshot-$(date +'%Y-%m-%d_%H-%M-%S').png"
+            
+      if [ "$#" -gt 0 ] && [ "$1" = "select" ]; then 
+        grim -g "$(slurp)" - | tee "$dir/$filename" | wl-copy
+      else 
+        grim - | tee "$dir/$filename" | wl-copy
+      fi
+    '';
+  };
+in
 {
-  imports = [ ./hyprpaper.nix ];
+  imports = [ ./hyprlock.nix ];
+
+  wayland.systemd.target = "hyprland-session.target";
+
+  home.packages =
+    (with pkgs; [
+      hyprpicker
+    ])
+    ++ [ screenshot ];
 
   wayland.windowManager.hyprland = {
-    enable = false;
+    enable = true;
     xwayland.enable = true;
 
     settings = {
-      "$mainMod" = "SUPER";
-      "$terminal" = "foot";
-      "$guiFM" = "thunar";
-      "$tuiFM" = "yazi";
-      "$menu" = "fuzzel";
-      "$browser" = "librewolf";
+      exec-once = [ "setbg" ];
 
       monitor = [ ",preferred,auto,1" ];
 
@@ -21,6 +44,9 @@
         kb_options = "caps:escape";
         follow_mouse = 1;
         sensitivity = 0.5;
+        scroll_factor = 1.5;
+        repeat_rate = 30;
+        repeat_delay = 250;
         touchpad = {
           natural_scroll = true;
         };
@@ -30,7 +56,7 @@
         gaps_in = 2;
         gaps_out = 5;
         border_size = 2;
-        "col.active_border" = "rgba(7aa2f7aa)";
+        "col.active_border" = "rgba(7aa2f7ff)";
         "col.inactive_border" = "rgba(414868aa)";
         layout = "dwindle";
       };
@@ -70,90 +96,90 @@
 
       windowrule = [ ];
 
-      windowrulev2 = [ "noblur,title:^()$,class:^()$" ];
+      windowrulev2 = [ ];
 
       bind = [
-        "$mainMod, return, exec, $terminal"
-        "$mainMod, Q, killactive,"
-        "$mainMod, F, exec, $browser"
+        "SUPER, return, exec, foot"
+        "SUPER, Q, killactive,"
+        "SUPER, F, fullscreen,"
+        "SUPER, W, exec, librewolf"
         "CTRL ALT, delete, exit,"
-        "$mainMod, E, exec, $guiFM"
-        "$mainMod SHIFT, E, exec, $terminal -e $tuiFM"
-        "$mainMod, V, togglefloating,"
-        "$mainMod, D, exec, $menu"
-        "$mainMod, P, pseudo,"
-        "$mainMod, U, togglesplit,"
-        "$mainMod SHIFT, P, exec, pavucontrol"
-        "$mainMod, M , exec, pamixer --default-source -t" # mute mic
-        "$mainMod SHIFT, M , exec, pamixer -t" # mute sound
-        "$mainMod, F7, exec, playerctl previous"
-        "$mainMod, F8, exec, playerctl next"
-        "$mainMod, F9 , exec, playerctl play-pause"
-        "$mainMod, F10 , exec, playerctl volume 0.05-"
-        "$mainMod, F11 , exec, playerctl volume 0.05+"
-        "$mainMod, F12, exec, playerctl stop"
-        "$mainMod, N, exec, $terminal -e rmpc"
-        "$mainMod, Y, exec, ytmpv"
-        "$mainMod SHIFT, Y, exec, ytdl"
+        "SUPER, E, exec, thunar"
+        "SUPER SHIFT, E, exec, foot -e yazi"
+        "SUPER, V, togglefloating,"
+        "SUPER, D, exec, fuzzel"
+        "SUPER SHIFT, P, pseudo,"
+        "SUPER, U, togglesplit,"
+        "SUPER, P, exec, pavucontrol"
+        "SUPER, comma, exec, pamixer --default-source -t" # mute mic
+        "SUPER SHIFT, comma , exec, pamixer -t" # mute sound
+        "SUPER, F7, exec, playerctl previous"
+        "SUPER, F8, exec, playerctl next"
+        "SUPER, F9 , exec, playerctl play-pause"
+        "SUPER, F10 , exec, playerctl volume 0.05-"
+        "SUPER, F11 , exec, playerctl volume 0.05+"
+        "SUPER, F12, exec, playerctl stop"
+        "SUPER, M, exec, foot -e rmpc"
+        "SUPER, Y, exec, ytmpv"
+        "SUPER SHIFT, Y, exec, ytdl"
 
-        "$mainMod SHIFT, period, exec, mullvad connect"
-        "$mainMod ALT, period, exec, mullvad disconnect"
+        "SUPER, period, exec, mullvad connect"
+        "SUPER SHIFT, period, exec, mullvad disconnect"
 
         # Screenshot bindings
-        "$mainMod ALT, S, exec, screenshot"
-        "$mainMod SHIFT, S, exec, screenshot select"
+        "SUPER ALT, S, exec, screenshot"
+        "SUPER SHIFT, S, exec, screenshot select"
 
         # Focus movement with vim keys
-        "$mainMod, h, movefocus, l"
-        "$mainMod, l, movefocus, r"
-        "$mainMod, k, movefocus, u"
-        "$mainMod, j, movefocus, d"
+        "SUPER, h, movefocus, l"
+        "SUPER, l, movefocus, r"
+        "SUPER, k, movefocus, u"
+        "SUPER, j, movefocus, d"
 
         # Swap windows
-        "$mainMod SHIFT, h, movewindow, l"
-        "$mainMod SHIFT, l, movewindow, r"
-        "$mainMod SHIFT, k, movewindow, u"
-        "$mainMod SHIFT, j, movewindow, d"
+        "SUPER SHIFT, h, movewindow, l"
+        "SUPER SHIFT, l, movewindow, r"
+        "SUPER SHIFT, k, movewindow, u"
+        "SUPER SHIFT, j, movewindow, d"
 
         # Resize Windows
-        "$mainMod ALT, l, resizeactive, 30 0"
-        "$mainMod ALT, h, resizeactive, -30 0"
-        "$mainMod ALT, k, resizeactive, 0 -30"
-        "$mainMod ALT, j, resizeactive, 0 30"
+        "SUPER ALT, l, resizeactive, 50 0"
+        "SUPER ALT, h, resizeactive, -50 0"
+        "SUPER ALT, k, resizeactive, 0 -50"
+        "SUPER ALT, j, resizeactive, 0 50"
 
         # Workspace switching
-        "$mainMod, 1, workspace, 1"
-        "$mainMod, 2, workspace, 2"
-        "$mainMod, 3, workspace, 3"
-        "$mainMod, 4, workspace, 4"
-        "$mainMod, 5, workspace, 5"
-        "$mainMod, 6, workspace, 6"
-        "$mainMod, 7, workspace, 7"
-        "$mainMod, 8, workspace, 8"
-        "$mainMod, 9, workspace, 9"
-        "$mainMod, 0, workspace, 10"
-        "$mainMod, TAB, workspace, previous" # jump to last used workspace
+        "SUPER, 1, workspace, 1"
+        "SUPER, 2, workspace, 2"
+        "SUPER, 3, workspace, 3"
+        "SUPER, 4, workspace, 4"
+        "SUPER, 5, workspace, 5"
+        "SUPER, 6, workspace, 6"
+        "SUPER, 7, workspace, 7"
+        "SUPER, 8, workspace, 8"
+        "SUPER, 9, workspace, 9"
+        "SUPER, 0, workspace, 10"
+        "SUPER, TAB, workspace, previous" # jump to last used workspace
 
         # Move windows to workspaces
-        "$mainMod SHIFT, 1, movetoworkspace, 1"
-        "$mainMod SHIFT, 2, movetoworkspace, 2"
-        "$mainMod SHIFT, 3, movetoworkspace, 3"
-        "$mainMod SHIFT, 4, movetoworkspace, 4"
-        "$mainMod SHIFT, 5, movetoworkspace, 5"
-        "$mainMod SHIFT, 6, movetoworkspace, 6"
-        "$mainMod SHIFT, 7, movetoworkspace, 7"
-        "$mainMod SHIFT, 8, movetoworkspace, 8"
-        "$mainMod SHIFT, 9, movetoworkspace, 9"
-        "$mainMod SHIFT, 0, movetoworkspace, 10"
+        "SUPER SHIFT, 1, movetoworkspace, 1"
+        "SUPER SHIFT, 2, movetoworkspace, 2"
+        "SUPER SHIFT, 3, movetoworkspace, 3"
+        "SUPER SHIFT, 4, movetoworkspace, 4"
+        "SUPER SHIFT, 5, movetoworkspace, 5"
+        "SUPER SHIFT, 6, movetoworkspace, 6"
+        "SUPER SHIFT, 7, movetoworkspace, 7"
+        "SUPER SHIFT, 8, movetoworkspace, 8"
+        "SUPER SHIFT, 9, movetoworkspace, 9"
+        "SUPER SHIFT, 0, movetoworkspace, 10"
       ];
 
       # Mouse bindings
       bindm = [
-        "$mainMod, mouse:272, movewindow"
-        "$mainMod, mouse:273, resizewindow"
+        "SUPER, mouse:272, movewindow"
+        "SUPER, mouse:273, resizewindow"
       ];
     };
   };
 
-  home.packages = with pkgs; [ hyprpicker ];
 }

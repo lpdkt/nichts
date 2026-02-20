@@ -4,7 +4,7 @@
 
   home.packages = [
     (pkgs.writeShellScriptBin "setbg" ''
-      swww img ~/nichts/modules/home/desktop/wallpaper/dune.jpg
+      swww img -t none ~/nichts/modules/home/desktop/wallpaper/mima.jpg
     '')
   ];
 }

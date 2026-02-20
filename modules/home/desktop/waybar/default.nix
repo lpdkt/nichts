@@ -10,7 +10,7 @@
         height = 30;
         spacing = 0;
         position = "top";
-        modules-left = [ "river/tags" ];
+        modules-left = [ "hyprland/workspaces" ];
         modules-center = [ "mpris" ];
         modules-right = [
           "battery"

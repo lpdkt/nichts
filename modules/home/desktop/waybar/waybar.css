@@ -9,7 +9,7 @@
 }
 
 window#waybar {
-  background: #1a1b26;
+  background: none;
 }
 
 tooltip {
@@ -108,7 +108,7 @@ tooltip {
   background: #1a1b26;
   opacity: 1;
   padding: 0px 7px;
-  /* margin-top: 5px; */
+  margin-top: 5px;
   /*  margin-bottom: 5px; */
   /* border: 1px solid #b5b0a7; */
 }

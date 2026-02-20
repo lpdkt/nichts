@@ -9,7 +9,7 @@
         alignment = "center";
         icon_corner_radius = 5;
         icon_position = "right";
-        corner_radius = 0;
+        corner_radius = 5;
         frame_width = 2;
         gap_size = 2;
         font = "Iosevka Nerd Font 10";

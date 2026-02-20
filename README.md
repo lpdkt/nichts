@@ -8,7 +8,7 @@ If you want to use it you will have to make your own changes!
 ### stuff i use: 
 
 distro: `nixos` \
-wm: `river` \
+wm: `hyprland` \
 theme:`tokyo night` \
 terminal emulator: `foot` \
 shell: `fish + starship` \

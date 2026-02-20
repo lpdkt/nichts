@@ -12,5 +12,11 @@
       dev = "nix develop --impure -c \"$SHELL\"";
       nsh = "nix-shell --impure --command \"$SHELL\"";
     };
+
+    loginShellInit = ''
+      if [ (tty) = "/dev/tty1" ]
+        start-hyprland
+      end
+    '';
   };
 }
