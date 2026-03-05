@@ -30,7 +30,7 @@
     gvfs.enable = true;
     printing = {
       enable = true;
-      # drivers = [ pkgs.cnijfilter2 ];
+      drivers = [ pkgs.cnijfilter2 ];
     };
     avahi = {
       enable = true;

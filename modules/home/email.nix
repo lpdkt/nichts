@@ -36,5 +36,20 @@ in
       userName = "mail@leroytraebert.de";
       thunderbird.enable = true;
     };
+
+    "leroy@traebert.de" = {
+      realName = "Leroy Traebert";
+      address = "leroy@traebert.de";
+      userName = "leroy@traebert.de";
+      thunderbird.enable = true;
+      imap = {
+        host = "imap.strato.de";
+        port = 993;
+      };
+      smtp = {
+        host = "smtp.strato.de";
+        port = 465;
+      };
+    };
   };
 }

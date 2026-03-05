@@ -111,20 +111,20 @@ in
         "SUPER SHIFT, P, pseudo,"
         "SUPER, U, togglesplit,"
         "SUPER, P, exec, pavucontrol"
-        "SUPER, comma, exec, pamixer --default-source -t" # mute mic
-        "SUPER SHIFT, comma , exec, pamixer -t" # mute sound
+        "SUPER, M, exec, pamixer --default-source -t" # mute mic
+        "SUPER SHIFT, M , exec, pamixer -t" # mute sound
         "SUPER, F7, exec, playerctl previous"
         "SUPER, F8, exec, playerctl next"
         "SUPER, F9 , exec, playerctl play-pause"
         "SUPER, F10 , exec, playerctl volume 0.05-"
         "SUPER, F11 , exec, playerctl volume 0.05+"
         "SUPER, F12, exec, playerctl stop"
-        "SUPER, M, exec, foot -e rmpc"
+        "SUPER, N, exec, foot -e rmpc"
         "SUPER, Y, exec, ytmpv"
         "SUPER SHIFT, Y, exec, ytdl"
 
-        "SUPER, period, exec, mullvad connect"
-        "SUPER SHIFT, period, exec, mullvad disconnect"
+        "SUPER, comma, exec, mullvad connect"
+        "SUPER SHIFT, comma, exec, mullvad disconnect"
 
         # Screenshot bindings
         "SUPER ALT, S, exec, screenshot"
