@@ -46,6 +46,7 @@
     picard
     keepassxc
     obsidian
+    vesktop
 
     # nix cli
     statix

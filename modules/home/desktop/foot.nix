@@ -10,7 +10,7 @@
         pad = "4x4 center";
       };
 
-      colors = {
+      colors-dark = {
         background = "1a1b26";
         foreground = "c0caf5";
         regular0 = "15161E";

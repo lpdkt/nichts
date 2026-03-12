@@ -109,7 +109,7 @@ in
         "SUPER, V, togglefloating,"
         "SUPER, D, exec, fuzzel"
         "SUPER SHIFT, P, pseudo,"
-        "SUPER, U, togglesplit,"
+        "SUPER, U, layoutmsg, togglesplit"
         "SUPER, P, exec, pavucontrol"
         "SUPER, M, exec, pamixer --default-source -t" # mute mic
         "SUPER SHIFT, M , exec, pamixer -t" # mute sound
