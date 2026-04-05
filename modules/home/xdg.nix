@@ -4,6 +4,7 @@
 
     userDirs = {
       enable = true;
+      setSessionVariables = true;
       desktop = "$HOME";
       templates = "$HOME";
       publicShare = "$HOME";

@@ -3,15 +3,17 @@
   imports = [
     ./hyprland
     ./waybar
+    ./awww.nix
     ./dunst.nix
     ./foot.nix
     ./fuzzel.nix
     ./gammastep.nix
     ./gtk.nix
-    ./swww.nix
   ];
 
-  services.network-manager-applet.enable = true;
+  services = {
+    network-manager-applet.enable = true;
+  };
 
   home.packages = with pkgs; [
     thunar

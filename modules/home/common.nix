@@ -37,16 +37,16 @@
   home.packages = with pkgs; [
 
     # gui
-    calibre
     gimp
     qbittorrent
-    koreader
     libreoffice
     nicotine-plus
     picard
     keepassxc
     obsidian
-    vesktop
+    calibre
+    koreader
+    kcc
 
     # nix cli
     statix
@@ -78,5 +78,6 @@
     yt-dlp
     abcde
     sacad
+    streamrip
   ];
 }

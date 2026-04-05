@@ -4,9 +4,11 @@
     GOBIN = "/home/leroy/.local/share/go/bin";
   };
 
-  virtualisation.docker = {
-    enable = true;
-    enableOnBoot = true;
+  virtualisation = {
+    docker = {
+      enable = true;
+      enableOnBoot = true;
+    };
   };
 
   users.users.leroy.extraGroups = [

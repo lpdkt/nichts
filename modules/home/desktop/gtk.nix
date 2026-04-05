@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   home.pointerCursor = {
     name = "Adwaita";
@@ -7,50 +7,26 @@
     gtk.enable = true;
   };
 
-  gtk =
-    # let
-    #   # https://codeberg.org/river/wiki#how-do-i-disable-gtk-decorations-e-g-title-bar
-    #   disableDecorations = {
-    #     extraConfig = {
-    #       gtk-dialogs-use-header = false;
-    #     };
-    #     extraCss = # css
-    #       ''
-    #         /* No (default) title bar on wayland */
-    #         headerbar.default-decoration {
-    #           margin-bottom: 50px;
-    #           margin-top: -100px;
-    #         }
-    #
-    #         /* rm -rf window shadows */
-    #         window.csd,             /* gtk4? */
-    #         window.csd decoration { /* gtk3 */
-    #           box-shadow: none;
-    #         }
-    #       '';
-    #   };
-    # in
-    {
-      enable = true;
+  gtk = {
+    enable = true;
 
-      theme = {
-        name = "Tokyonight-Dark";
-        package = pkgs.tokyonight-gtk-theme;
-      };
-
-      iconTheme = {
-        name = "Papirus-Dark";
-        package = pkgs.papirus-icon-theme;
-      };
-
-      font = {
-        name = "Iosevka Nerd Font";
-        size = 10;
-      };
-
-      # gtk3 = disableDecorations;
-      # gtk4 = disableDecorations;
+    theme = {
+      name = "Tokyonight-Dark";
+      package = pkgs.tokyonight-gtk-theme;
     };
+
+    iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
+    };
+
+    font = {
+      name = "Iosevka Nerd Font";
+      size = 10;
+    };
+
+    gtk4.theme = config.gtk.theme;
+  };
 
   qt = {
     enable = true;

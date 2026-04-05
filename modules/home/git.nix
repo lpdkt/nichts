@@ -5,5 +5,6 @@
       user.name = "lpdkt";
       user.email = "me@lpdkt.xyz";
     };
+    signing.format = "openpgp";
   };
 }

@@ -101,7 +101,8 @@ in
       bind = [
         "SUPER, return, exec, foot"
         "SUPER, Q, killactive,"
-        "SUPER, F, fullscreen,"
+        "SUPER, F, fullscreen, 1" # maximize window
+        "SUPER SHIFT, F, fullscreen, 0" # fullscreen
         "SUPER, W, exec, librewolf"
         "CTRL ALT, delete, exit,"
         "SUPER, E, exec, thunar"
