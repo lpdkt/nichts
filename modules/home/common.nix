@@ -42,11 +42,13 @@
     libreoffice
     nicotine-plus
     picard
+    feishin
     keepassxc
     obsidian
     calibre
     koreader
     kcc
+    vesktop
 
     # nix cli
     statix

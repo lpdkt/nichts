@@ -28,6 +28,7 @@
       "nix-command"
       "flakes"
     ];
+    package = pkgs.lixPackageSets.stable.lix;
   };
 
   hardware = {

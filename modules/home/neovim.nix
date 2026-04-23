@@ -160,9 +160,7 @@
         rust.enable = true;
         bash.enable = true;
         zig.enable = true;
-        ts.enable = true;
-        svelte.enable = true;
-        tailwind.enable = true;
+        typescript.enable = true;
         css.enable = true;
         html.enable = true;
         typst.enable = true;

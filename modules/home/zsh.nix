@@ -37,9 +37,6 @@
         hostName = builtins.getEnv "HOSTNAME";
       in
       {
-        vim = "nvim";
-        media = "cd /mnt/media/";
-        music = "cd /mnt/media/music";
         conf = "cd ~/nichts";
         ".." = "cd ..";
         "..." = "cd ../..";
@@ -50,7 +47,7 @@
 
     profileExtra = ''
       if [ -z "$WAYLAND_DISPLAY" ] && [ $(tty) = "/dev/tty1" ]; then
-        exec river
+        start-hyprland
       fi
     '';
   };
