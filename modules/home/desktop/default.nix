@@ -1,19 +1,13 @@
 { pkgs, ... }:
 {
   imports = [
-    ./hyprland
-    ./waybar
+    ./noctalia
     ./awww.nix
-    ./dunst.nix
     ./foot.nix
     ./fuzzel.nix
-    ./gammastep.nix
     ./gtk.nix
+    ./niri.nix
   ];
-
-  services = {
-    network-manager-applet.enable = true;
-  };
 
   home.packages = with pkgs; [
     thunar
@@ -25,8 +19,8 @@
     gnome-keyring
     wl-clipboard
     pavucontrol
-    pamixer
     playerctl
     brightnessctl
+    woomer
   ];
 }

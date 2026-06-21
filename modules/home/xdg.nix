@@ -21,7 +21,7 @@
           let
             file-manager = "thunar.desktop";
             editor = "nvim.desktop";
-            browser = "librewolf.desktop";
+            browser = "firefox.desktop";
             video-player = "mpv.desktop";
             image-viewer = "imv-dir.desktop";
             music-player = "mpv.desktop";

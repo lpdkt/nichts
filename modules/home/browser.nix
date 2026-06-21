@@ -1,7 +1,8 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
-  programs.librewolf = {
+  programs.firefox = {
     enable = true;
+    configPath = "${config.xdg.configHome}/mozilla/firefox";
     policies = {
       DownloadDirectory = "\${home}/downloads";
       OfferToSaveLogins = false;

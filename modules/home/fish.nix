@@ -15,11 +15,5 @@
         nsh = "nix-shell --impure --command \"$SHELL\"";
         rebuild = "sudo nixos-rebuild switch --flake ~/nichts#${hostName}";
       };
-
-    loginShellInit = ''
-      if [ (tty) = "/dev/tty1" ]
-        start-hyprland
-      end
-    '';
   };
 }

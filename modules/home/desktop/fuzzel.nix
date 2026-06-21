@@ -15,13 +15,13 @@
       };
 
       colors = {
-        background = "16161eff";
+        background = "1a1b26ff";
         text = "c0caf5ff";
         match = "2ac3deff";
         selection = "343a55ff";
         selection-match = "2ac3deff";
         selection-text = "c0caf5ff";
-        border = "7aa2f7ff";
+        border = "7aa2f7aa";
       };
 
       border = {

@@ -4,14 +4,13 @@
 
   home = {
     sessionVariables = {
-      TERMINAL = "foot";
-      EDITOR = "nvim";
       XDG_SESSION_TYPE = "wayland";
-      GDK_BACKEND = "wayland,x11,*";
+      QT_QPA_PLATFORM = "wayland";
+      GTK_USE_PORTAL = 1;
       NIXOS_OZONE_WL = 1;
       MOZ_ENABLE_WAYLAND = 1;
     };
-    stateVersion = "24.11";
+    stateVersion = "26.05";
   };
 
   nix.gc = {
@@ -42,13 +41,15 @@
     libreoffice
     nicotine-plus
     picard
-    feishin
     keepassxc
     obsidian
     calibre
     koreader
     kcc
-    vesktop
+    bottles
+    reaper
+    tuxguitar
+    freetube
 
     # nix cli
     statix

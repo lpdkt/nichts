@@ -11,8 +11,8 @@
     enable = true;
 
     theme = {
-      name = "Tokyonight-Dark";
-      package = pkgs.tokyonight-gtk-theme;
+      name = "adw-gtk3";
+      package = pkgs.adw-gtk3;
     };
 
     iconTheme = {
@@ -27,6 +27,8 @@
 
     gtk4.theme = config.gtk.theme;
   };
+
+  xdg.configFile."gtk-4.0/gtk.css".force = true;
 
   qt = {
     enable = true;

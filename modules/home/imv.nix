@@ -7,6 +7,7 @@
       };
       binds = {
         y = "exec wl-copy < \"$imv_current_file\"";
+        r = "rotate by 90";
       };
     };
   };

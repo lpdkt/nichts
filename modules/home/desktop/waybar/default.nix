@@ -10,7 +10,7 @@
         height = 30;
         spacing = 0;
         position = "top";
-        modules-left = [ "hyprland/workspaces" ];
+        modules-left = [ "niri/workspaces" ];
         modules-center = [ "mpris" ];
         modules-right = [
           "battery"
@@ -44,6 +44,31 @@
           all-outputs = true;
           on-click = "activate";
         };
+
+        "niri/window" = {
+          format = "{}";
+        };
+
+        "niri/workspaces" = {
+          disable-scroll = true;
+          format = "{icon}";
+          format-icons = {
+            "1" = "1";
+            "2" = "2";
+            "3" = "3";
+            "4" = "4";
+            "5" = "5";
+            "6" = "6";
+            "7" = "7";
+            "8" = "8";
+            "9" = "9";
+            "10" = "10";
+          };
+          all-outputs = true;
+          on-click = "activate";
+        };
+
+        
 
         "river/tags" = {
           hide-vacant = true;

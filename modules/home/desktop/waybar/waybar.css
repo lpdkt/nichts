@@ -36,6 +36,7 @@ tooltip {
   color: #313244;
   margin-right: 5px;
   /* margin-left: 10px; */
+  min-width: 15px;
 }
 
 #workspaces button.active {

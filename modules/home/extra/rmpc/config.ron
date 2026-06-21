@@ -27,7 +27,6 @@
     auto_open_downloads: true,
     album_art: (
         method: Auto,
-        max_size_px: (width: 1200, height: 1200),
         disabled_protocols: ["http://", "https://"],
         vertical_align: Center,
         horizontal_align: Center,

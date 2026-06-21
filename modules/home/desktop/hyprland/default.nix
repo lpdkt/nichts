@@ -20,10 +20,6 @@ let
   };
 in
 {
-  imports = [ ./hyprlock.nix ];
-
-  wayland.systemd.target = "hyprland-session.target";
-
   home.packages =
     (with pkgs; [
       hyprpicker
@@ -50,6 +46,10 @@ in
         touchpad = {
           natural_scroll = true;
         };
+      };
+
+      misc = {
+        middle_click_paste = false;
       };
 
       general = {
@@ -80,7 +80,6 @@ in
       animations.enabled = false;
 
       dwindle = {
-        pseudotile = true;
         preserve_split = true;
       };
 
@@ -103,7 +102,7 @@ in
         "SUPER, Q, killactive,"
         "SUPER, F, fullscreen, 1" # maximize window
         "SUPER SHIFT, F, fullscreen, 0" # fullscreen
-        "SUPER, W, exec, librewolf"
+        "SUPER, W, exec, firefox"
         "CTRL ALT, delete, exit,"
         "SUPER, E, exec, thunar"
         "SUPER SHIFT, E, exec, foot -e yazi"
@@ -123,6 +122,8 @@ in
         "SUPER, N, exec, foot -e rmpc"
         "SUPER, Y, exec, ytmpv"
         "SUPER SHIFT, Y, exec, ytdl"
+        "SUPER ALT, Y, exec, ytmpvsearch"
+        "SUPER, Z, exec, woomer"
 
         "SUPER, comma, exec, mullvad connect"
         "SUPER SHIFT, comma, exec, mullvad disconnect"

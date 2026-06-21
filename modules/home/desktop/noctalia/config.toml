@@ -1,0 +1,138 @@
+[bar.default]
+center = [ "media" ]
+end = [
+    "notifications",
+    "cpu",
+    "ram",
+    "bluetooth",
+    "volume",
+    "input_volume",
+    "brightness",
+    "battery",
+    "weather",
+    "date",
+    "clock",
+    "network",
+    "session",
+    "tray"
+]
+margin_edge = 0
+margin_ends = 0
+radius = 0
+shadow = false
+start = [ "workspaces" ]
+thickness = 30
+widget_spacing = 15
+
+[idle]
+behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = true
+    timeout = 600
+
+    [idle.behavior.lock-and-suspend]
+    action = "lock_and_suspend"
+    enabled = true
+    timeout = 900
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = true
+    timeout = 660
+
+[location]
+auto_locate = true
+sunrise = "07:30"
+sunset = "20:30"
+
+[lockscreen_widgets]
+enabled = false
+schema_version = 2
+widget_order = [ "lockscreen-login-box@DP-1" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-1"]
+    box_height = 70.0
+    box_width = 400.0
+    cx = 1280.0
+    cy = 1321.0
+    output = "DP-1"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        input_opacity = 1.0
+        input_radius = 6.0
+        show_login_button = true
+
+[nightlight]
+enabled = true
+force = false
+temperature_night = 3400
+
+[osd]
+position = "top_right"
+
+[plugins]
+enabled = []
+
+[shell]
+avatar_path = "/home/leroy/pictures/5c92ae563e9731dc410aa97d10b37b9a.png"
+font_family = "Iosevka NF"
+screen_time_enabled = true
+
+    [shell.mpris]
+    blacklist = [ "firefox", "librewolf", "freetube" ]
+
+[theme]
+builtin = "Tokyo-Night"
+community_palette = "Oxocarbon"
+mode = "dark"
+source = "builtin"
+wallpaper_scheme = "m3-content"
+
+    [theme.templates]
+    builtin_ids = [ "btop", "cava", "gtk3", "gtk4", "niri" ]
+    community_ids = [ "steam" ]
+
+[wallpaper]
+directory = "/home/leroy/nichts/modules/home/desktop/wallpaper"
+enabled = false
+
+    [wallpaper.default]
+    path = "/home/leroy/nichts/modules/home/desktop/wallpaper/mima.jpg"
+
+    [wallpaper.last]
+    path = "/home/leroy/nichts/modules/home/desktop/wallpaper/mima.jpg"
+
+    [wallpaper.monitors.DP-1]
+    path = "/home/leroy/nichts/modules/home/desktop/wallpaper/mima.jpg"
+
+[widget.media]
+hide_when_no_media = true
+max_length = 800
+
+[widget.network]
+show_label = false
+
+[widget.notifications]
+hide_when_no_unread = true
+
+[widget.weather]
+show_condition = false
+
+[widget.workspaces]
+empty_color = "outline"
+hide_when_empty = true
+minimal = true
+occupied_color = "outline"
+scale = 1.3

@@ -38,8 +38,19 @@
     useUserPackages = true;
     users.leroy = {
       imports = [ ./../../modules/home ];
-      programs.hyprlock.enable = lib.mkForce false;
-      services.hypridle.enable = lib.mkForce false;
+      programs.niri.settings.outputs."DP-1" = {
+        mode = {
+          width = 2560;
+          height = 1440;
+          refresh = 180.063;
+
+        };
+        scale = 1;
+        position = {
+          x = 0;
+          y = 0;
+        };
+      };
     };
     extraSpecialArgs = { inherit inputs; };
   };
