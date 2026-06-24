@@ -109,10 +109,6 @@
         open-floating = true;
       }
       {
-        matches = [ { app-id = "thunar$"; } ];
-        open-floating = true;
-      }
-      {
         geometry-corner-radius = {
           top-left = 5.0;
           top-right = 5.0;
@@ -158,7 +154,7 @@
 
       "Mod+Return" = {
         hotkey-overlay.title = "Open a Terminal: foot";
-        action.spawn = "foot";
+        action.spawn = "footclient";
       };
       "Mod+D" = {
         hotkey-overlay.title = "Run an Application: fuzzel";
@@ -253,7 +249,7 @@
       "Mod+Shift+Y".action.spawn = "ytdl";
 
       "Mod+N".action.spawn = [
-        "foot"
+        "footclient"
         "-e"
         "rmpc"
       ];

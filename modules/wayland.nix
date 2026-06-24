@@ -32,10 +32,7 @@
 
   services.displayManager = {
     enable = true;
-    ly = {
-      enable = true;
-      settings.animation = "doom";
-    };
+    ly.enable = true;
   };
 
   environment.systemPackages = with pkgs; [ xwayland-satellite ];

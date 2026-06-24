@@ -1,7 +1,6 @@
 [bar.default]
 center = [ "media" ]
 end = [
-    "notifications",
     "cpu",
     "ram",
     "bluetooth",
@@ -13,8 +12,8 @@ end = [
     "date",
     "clock",
     "network",
-    "session",
-    "tray"
+    "tray",
+    "session"
 ]
 margin_edge = 0
 margin_ends = 0
@@ -87,11 +86,15 @@ enabled = []
 
 [shell]
 avatar_path = "/home/leroy/pictures/5c92ae563e9731dc410aa97d10b37b9a.png"
+clipboard_enabled = false
 font_family = "Iosevka NF"
 screen_time_enabled = true
 
     [shell.mpris]
     blacklist = [ "firefox", "librewolf", "freetube" ]
+
+    [shell.panel]
+    open_near_click_control_center = true
 
 [theme]
 builtin = "Tokyo-Night"
