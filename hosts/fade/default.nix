@@ -32,6 +32,8 @@
     shell = pkgs.fish;
   };
 
+  services.upower.enable = true;
+
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
@@ -55,6 +57,19 @@
         ./../../modules/home/zathura.nix
         ./../../modules/home/zsh.nix
       ];
+      programs.niri.settings.outputs."eDP-1" = {
+        mode = {
+          width = 1920;
+          height = 1080;
+          refresh = 60.09600;
+
+        };
+        scale = 1;
+        position = {
+          x = 0;
+          y = 0;
+        };
+      };
     };
     extraSpecialArgs = { inherit inputs; };
   };

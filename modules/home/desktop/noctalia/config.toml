@@ -1,13 +1,13 @@
 [bar.default]
 center = [ "media" ]
 end = [
+    "battery",
     "cpu",
     "ram",
     "bluetooth",
     "volume",
     "input_volume",
     "brightness",
-    "battery",
     "weather",
     "date",
     "clock",
