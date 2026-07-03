@@ -1,6 +1,14 @@
+{ pkgs, ... }:
 {
   programs.mpv = {
     enable = true;
+
+    scripts = with pkgs.mpvScripts; [
+      cut
+      crop
+      mpris
+      convert
+    ];
 
     config = {
       volume = 60;

@@ -6,10 +6,6 @@
       XDG_SESSION_DESKTOP = "niri";
     };
 
-    spawn-at-startup = [
-      { argv = [ "noctalia" ]; }
-    ];
-
     input = {
       keyboard = {
         xkb = {
@@ -86,7 +82,7 @@
         place-within-backdrop = true;
       }
       {
-        matches = [ { namespace = "^awww-daemon$"; } ];
+        matches = [ { namespace = "^noctalia-backdrop$"; } ];
         place-within-backdrop = true;
       }
     ];

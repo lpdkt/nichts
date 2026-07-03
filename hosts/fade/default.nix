@@ -62,7 +62,6 @@
           width = 1920;
           height = 1080;
           refresh = 60.09600;
-
         };
         scale = 1;
         position = {

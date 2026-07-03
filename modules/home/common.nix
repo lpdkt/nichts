@@ -49,6 +49,7 @@
     bottles
     reaper
     tuxguitar
+    musescore
     freetube
 
     # nix cli

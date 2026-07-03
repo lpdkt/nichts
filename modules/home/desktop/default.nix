@@ -1,12 +1,11 @@
 { pkgs, ... }:
 {
   imports = [
-    ./noctalia
-    ./awww.nix
     ./foot.nix
     ./fuzzel.nix
     ./gtk.nix
     ./niri.nix
+    ./noctalia.nix
   ];
 
   home.packages = with pkgs; [
