@@ -30,10 +30,5 @@
     package = pkgs.niri-unstable;
   };
 
-  services.displayManager = {
-    enable = true;
-    ly.enable = true;
-  };
-
   environment.systemPackages = with pkgs; [ xwayland-satellite ];
 }

@@ -50,7 +50,8 @@
     reaper
     tuxguitar
     musescore
-    freetube
+    qbz
+    (discord.override { withVencord = true; })
 
     # nix cli
     statix

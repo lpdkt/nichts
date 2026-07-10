@@ -68,8 +68,6 @@
           on-click = "activate";
         };
 
-        
-
         "river/tags" = {
           hide-vacant = true;
         };

@@ -41,7 +41,12 @@
         clipboard_confirm_clear_history = false;
         screen_time_enabled = true;
         mpris.blacklist = [ "firefox" ];
-        panel.open_near_click_control_center = true;
+        panel = {
+          clipboard_placement = "attached";
+          open_near_click_control_center = true;
+          open_near_click_clipboard = true;
+          open_near_click_session = true;
+        };
       };
 
       idle = {
@@ -50,20 +55,22 @@
           "screen-off"
           "lock-and-suspend"
         ];
-        lock = {
-          action = "lock";
-          enabled = true;
-          timeout = 900.0;
-        };
-        screen-off = {
-          action = "screen_off";
-          enabled = true;
-          timeout = 1200.0;
-        };
-        lock-and-suspend = {
-          action = "lock_and_suspend";
-          enabled = true;
-          timeout = 1800.0;
+        behavior = {
+          lock = {
+            action = "lock";
+            enabled = true;
+            timeout = 600;
+          };
+          screen-off = {
+            action = "screen_off";
+            enabled = true;
+            timeout = 660;
+          };
+          lock-and-suspend = {
+            action = "lock_and_suspend";
+            enabled = true;
+            timeout = 900;
+          };
         };
       };
 

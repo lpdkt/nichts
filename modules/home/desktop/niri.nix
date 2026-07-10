@@ -1,4 +1,3 @@
-{ pkgs, ... }:
 {
   programs.niri.settings = {
     environment = {
@@ -279,24 +278,24 @@
       "Mod+K".action.focus-window-up = [ ];
       "Mod+L".action.focus-column-right = [ ];
 
-      "Mod+Alt+Left".action.move-column-left = [ ];
-      "Mod+Alt+Down".action.move-window-down = [ ];
-      "Mod+Alt+Up".action.move-window-up = [ ];
-      "Mod+Alt+Right".action.move-column-right = [ ];
-      "Mod+Alt+H".action.move-column-left = [ ];
-      "Mod+Alt+J".action.move-window-down = [ ];
-      "Mod+Alt+K".action.move-window-up = [ ];
-      "Mod+Alt+L".action.move-column-right = [ ];
+      "Mod+Shift+Left".action.move-column-left = [ ];
+      "Mod+Shift+Down".action.move-window-down = [ ];
+      "Mod+Shift+Up".action.move-window-up = [ ];
+      "Mod+Shift+Right".action.move-column-right = [ ];
+      "Mod+Shift+H".action.move-column-left = [ ];
+      "Mod+Shift+J".action.move-window-down = [ ];
+      "Mod+Shift+K".action.move-window-up = [ ];
+      "Mod+Shift+L".action.move-column-right = [ ];
 
       "Mod+Home".action.focus-column-first = [ ];
       "Mod+End".action.focus-column-last = [ ];
       "Mod+Ctrl+Home".action.move-column-to-first = [ ];
       "Mod+Ctrl+End".action.move-column-to-last = [ ];
 
-      "Mod+Shift+Left".action.focus-monitor-left = [ ];
-      "Mod+Shift+Down".action.focus-monitor-down = [ ];
-      "Mod+Shift+Up".action.focus-monitor-up = [ ];
-      "Mod+Shift+Right".action.focus-monitor-right = [ ];
+      "Mod+Alt+Left".action.focus-monitor-left = [ ];
+      "Mod+Alt+Down".action.focus-monitor-down = [ ];
+      "Mod+Alt+Up".action.focus-monitor-up = [ ];
+      "Mod+Alt+Right".action.focus-monitor-right = [ ];
 
       "Mod+Shift+Ctrl+Left".action.move-column-to-monitor-left = [ ];
       "Mod+Shift+Ctrl+Down".action.move-column-to-monitor-down = [ ];
