@@ -18,10 +18,7 @@
 
       touchpad = {
         tap = true;
-        accel-speed = 0.0;
-        natural-scroll = false;
-        scroll-factor = 0.5;
-        scroll-method = "two-finger";
+        accel-speed = 0.5;
       };
 
       mouse = {

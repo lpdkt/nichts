@@ -21,6 +21,8 @@
 
   hardware.graphics.enable = true;
 
+  boot.kernelParams = [ "psmouse.synaptics_intertouch=1" ];
+
   users.users.leroy = {
     isNormalUser = true;
     description = "leroy";

@@ -30,5 +30,16 @@
     package = pkgs.niri-unstable;
   };
 
+  services.displayManager = {
+    enable = true;
+    ly = {
+      enable = true;
+      settings = {
+        session_log = "/home/leroy/.local/state/ly-session.log";
+        setup_cmd = "";
+      };
+    };
+  };
+
   environment.systemPackages = with pkgs; [ xwayland-satellite ];
 }

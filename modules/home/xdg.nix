@@ -43,7 +43,7 @@
             "audio/flac" = [ music-player ];
             "audio/ogg" = [ music-player ];
             "audio/wav" = [ music-player ];
-            "application/epub+zip" = [ "koreader.desktop" ];
+            "application/epub+zip" = [ "rocks.koreader.koreader.desktop" ];
             "x-scheme-handler/http" = [ browser ];
             "x-scheme-handler/https" = [ browser ];
             "x-scheme-handler/chrome" = [ browser ];

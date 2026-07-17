@@ -46,7 +46,6 @@
     calibre
     koreader
     kcc
-    bottles
     reaper
     tuxguitar
     musescore

@@ -10,18 +10,16 @@
         start = [ "workspaces" ];
         center = [ "media" ];
         end = [
-          "notifications"
-          "clipboard"
           "battery"
           "cpu"
           "ram"
-          "bluetooth"
           "volume"
           "input_volume"
           "brightness"
           "weather"
           "date"
           "clock"
+          "bluetooth"
           "network"
           "tray"
           "session"
@@ -117,7 +115,7 @@
         workspaces = {
           empty_color = "outline";
           hide_when_empty = true;
-          minimal = true;
+          style = "minimal";
           occupied_color = "outline";
           scale = 1.3;
         };
