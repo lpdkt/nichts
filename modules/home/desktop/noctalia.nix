@@ -34,11 +34,10 @@
       };
 
       shell = {
-        avatar_path = "/home/leroy/nichts/icon.png";
+        avatar_path = "/home/leroy/.nichts/icon.png";
         font_family = "Iosevka NF";
+        clipboard_enabled = false;
         clipboard_confirm_clear_history = false;
-        screen_time_enabled = true;
-        mpris.blacklist = [ "firefox" ];
         panel = {
           clipboard_placement = "attached";
           open_near_click_control_center = true;
@@ -99,7 +98,7 @@
         ];
       };
 
-      wallpaper.directory = "/home/leroy/nichts/modules/home/desktop/wallpaper";
+      wallpaper.directory = "/home/leroy/.nichts/modules/home/desktop/wallpaper";
 
       backdrop.enabled = true;
 
@@ -117,7 +116,6 @@
           hide_when_empty = true;
           style = "minimal";
           occupied_color = "outline";
-          scale = 1.3;
         };
       };
     };

@@ -12,7 +12,7 @@
     inputs.home-manager.nixosModules.home-manager
   ];
 
-  networking.hostName = "noise";
+  networking.hostName = "dronevil";
 
   boot.initrd.kernelModules = [ "amdgpu" ];
 

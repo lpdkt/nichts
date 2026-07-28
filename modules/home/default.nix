@@ -1,16 +1,15 @@
 {
   imports = [
     ./desktop
+    ./mpd
     ./browser.nix
     ./common.nix
-    ./direnv.nix
     ./email.nix
     ./fish.nix
     ./gaming.nix
     ./git.nix
     ./gpg.nix
     ./imv.nix
-    ./mpd.nix
     ./mpv.nix
     ./neovim.nix
     ./rec.nix

@@ -131,14 +131,14 @@
         servers = {
           nixd.settings.nixd.options =
             let
-              flake = ''(builtins.getFlake "/home/leroy/nichts")'';
+              flake = ''(builtins.getFlake "/home/leroy/.nichts")'';
             in
             {
               nixos = {
-                expr = "${flake}.nixosConfigurations.noise.options";
+                expr = "${flake}.nixosConfigurations.dronevil.options";
               };
               home_manager = {
-                expr = "${flake}.nixosConfigurations.noise.options.home-manager.users.type.getSubOptions []";
+                expr = "${flake}.nixosConfigurations.dronevil.options.home-manager.users.type.getSubOptions []";
               };
             };
         };

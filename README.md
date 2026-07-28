@@ -8,7 +8,12 @@ Mirror: <https://github.com/lpdkt/nichts>
 This config is not optimized to be used by anyone besides myself.  
 If you want to use it, make your own changes!
 
-### stuff i use
+## hosts
+
+`dronevil` desktop pc \
+`fade` laptop
+
+## stuff i use
 
 distro: `nixos` \
 wm: `niri` \

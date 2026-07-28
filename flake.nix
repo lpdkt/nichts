@@ -43,10 +43,10 @@
     }:
     {
       nixosConfigurations = {
-        noise = nixpkgs.lib.nixosSystem {
+        dronevil = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs; };
           system = "x86_64-linux";
-          modules = [ ./hosts/noise ];
+          modules = [ ./hosts/dronevil ];
         };
 
         fade = nixpkgs.lib.nixosSystem {

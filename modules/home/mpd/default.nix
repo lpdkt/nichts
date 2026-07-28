@@ -27,12 +27,12 @@
   };
 
   xdg.configFile = {
-    "rmpc/config.ron".source = ./extra/rmpc/config.ron;
-    "rmpc/themes/theme.ron".source = ./extra/rmpc/theme.ron;
+    "rmpc/config.ron".source = ./rmpc/config.ron;
+    "rmpc/themes/theme.ron".source = ./rmpc/theme.ron;
   };
 
   home.packages = with pkgs; [
-    mpc
     rmpc
+    mpc
   ];
 }

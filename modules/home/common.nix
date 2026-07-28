@@ -31,6 +31,10 @@
         "--layout=reverse"
       ];
     };
+    direnv = {
+      enable = true;
+      nix-direnv.enable = true;
+    };
   };
 
   home.packages = with pkgs; [
@@ -41,7 +45,6 @@
     libreoffice
     nicotine-plus
     picard
-    keepassxc
     obsidian
     calibre
     koreader
@@ -49,7 +52,6 @@
     reaper
     tuxguitar
     musescore
-    qbz
     (discord.override { withVencord = true; })
 
     # nix cli

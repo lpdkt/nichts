@@ -20,7 +20,7 @@
     ];
 
     envExtra = ''
-      path+=("$HOME/bin")
+      path+=("$HOME/.local/bin")
       path+=("$HOME/.local/share/go/bin")
       export PATH
     '';
@@ -37,18 +37,12 @@
         hostName = builtins.getEnv "HOSTNAME";
       in
       {
-        conf = "cd ~/nichts";
+        conf = "cd ~/.nichts";
         ".." = "cd ..";
         "..." = "cd ../..";
         "...." = "cd ../../..";
         dev = "nix develop --impure -c \"$SHELL\"";
-        rebuild = "sudo nixos-rebuild switch --flake ~/nichts#${hostName}";
+        rebuild = "sudo nixos-rebuild switch --flake ~/.nichts#${hostName}";
       };
-
-    profileExtra = ''
-      if [ -z "$WAYLAND_DISPLAY" ] && [ $(tty) = "/dev/tty1" ]; then
-        start-hyprland
-      fi
-    '';
   };
 }

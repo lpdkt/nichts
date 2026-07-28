@@ -25,21 +25,7 @@
 
   nixpkgs.overlays = [ inputs.niri.overlays.niri ];
 
-  programs.niri = {
-    enable = true;
-    package = pkgs.niri-unstable;
-  };
-
-  services.displayManager = {
-    enable = true;
-    ly = {
-      enable = true;
-      settings = {
-        session_log = "/home/leroy/.local/state/ly-session.log";
-        setup_cmd = "";
-      };
-    };
-  };
+  programs.niri.enable = true; 
 
   environment.systemPackages = with pkgs; [ xwayland-satellite ];
 }

@@ -12,7 +12,6 @@
     thunar
     thunar-volman
     tumbler
-    xfconf
     ffmpegthumbnailer
     libnotify
     gnome-keyring
