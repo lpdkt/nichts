@@ -34,5 +34,14 @@
   home.packages = with pkgs; [
     rmpc
     mpc
+    audacity
+    reaper
+    tuxguitar
+    musescore
+    nicotine-plus
+    picard
+    abcde
+    sacad
+    streamrip
   ];
 }

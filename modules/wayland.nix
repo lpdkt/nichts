@@ -1,4 +1,8 @@
-{ pkgs, inputs, ... }:
+{
+  pkgs,
+  inputs,
+  ...
+}:
 {
   imports = [ inputs.niri.nixosModules.niri ];
 
@@ -25,7 +29,17 @@
 
   nixpkgs.overlays = [ inputs.niri.overlays.niri ];
 
-  programs.niri.enable = true; 
+  programs.niri.enable = true;
+
+  services.displayManager.ly = {
+    enable = true;
+    settings = {
+      clear_password = true;
+      xinitrc = "";
+      setup_cmd = "";
+      session_log = "/home/leroy/.local/state/ly-session.log";
+    };
+  };
 
   environment.systemPackages = with pkgs; [ xwayland-satellite ];
 }

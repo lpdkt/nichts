@@ -6,7 +6,6 @@
   };
 
   home.packages = with pkgs; [
-    audacity
     kdePackages.kdenlive
     v4l-utils
   ];

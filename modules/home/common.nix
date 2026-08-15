@@ -43,15 +43,11 @@
     gimp
     qbittorrent
     libreoffice
-    nicotine-plus
-    picard
     obsidian
     calibre
     koreader
     kcc
-    reaper
-    tuxguitar
-    musescore
+    (bottles.override { removeWarningPopup = true; })
     (discord.override { withVencord = true; })
 
     # nix cli
@@ -82,8 +78,5 @@
     gparted
     duf
     yt-dlp
-    abcde
-    sacad
-    streamrip
   ];
 }

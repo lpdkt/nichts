@@ -1,7 +1,7 @@
 {
   imports = [
     ./desktop
-    ./mpd
+    ./music
     ./browser.nix
     ./common.nix
     ./email.nix

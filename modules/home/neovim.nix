@@ -183,6 +183,7 @@
           diff
           regex
           ini
+          ron
         ];
       };
 

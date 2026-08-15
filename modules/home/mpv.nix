@@ -4,10 +4,10 @@
     enable = true;
 
     scripts = with pkgs.mpvScripts; [
-      cut
       crop
       mpris
-      convert
+      mpv-webm
+      sponsorblock
     ];
 
     config = {
