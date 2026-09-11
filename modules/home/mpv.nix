@@ -7,11 +7,10 @@
       crop
       mpris
       mpv-webm
-      sponsorblock
     ];
 
     config = {
-      volume = 60;
+      volume = 75;
       ytdl-format = "bestvideo+bestaudio/best";
       ytdl-raw-options = "sub-lang=en,write-subs=,embed-subs=";
       slang = "en,eng";

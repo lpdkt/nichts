@@ -14,7 +14,7 @@
       colors-dark = {
         background = "1a1b26";
         foreground = "c0caf5";
-        regular0 = "15161E";
+        regular0 = "15161e";
         regular1 = "f7768e";
         regular2 = "9ece6a";
         regular3 = "e0af68";
