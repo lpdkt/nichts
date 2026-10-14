@@ -1,8 +1,7 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 {
-  programs.firefox = {
+  programs.librewolf = {
     enable = true;
-    configPath = "${config.xdg.configHome}/mozilla/firefox";
     policies = {
       DownloadDirectory = "\${home}/downloads";
       OfferToSaveLogins = false;
@@ -12,8 +11,5 @@
     };
   };
 
-  home.packages = with pkgs; [
-    ungoogled-chromium
-    tor-browser
-  ];
+  home.packages = with pkgs; [ tor-browser ];
 }

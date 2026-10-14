@@ -23,7 +23,7 @@ shell: `fish + starship` \
 text editor: `neovim` \
 application launcher: `fuzzel` \
 bar: `noctalia` \
-browser: `hardened firefox` \
+browser: `librewolf` \
 file manager: `yazi & thunar` \
 notifications: `noctalia` \
 video player: `mpv` \

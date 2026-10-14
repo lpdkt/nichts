@@ -4,6 +4,7 @@
     ./music
     ./browser.nix
     ./common.nix
+    ./direnv.nix
     ./email.nix
     ./fish.nix
     ./gaming.nix

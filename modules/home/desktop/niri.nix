@@ -156,6 +156,10 @@
         hotkey-overlay.title = "Open File Manager: thunar";
         action.spawn = "thunar";
       };
+      "Mod+W" = {
+        hotkey-overlay.title = "Open Browser: librewolf";
+        action.spawn = "librewolf";
+      };
       "Mod+Shift+S" = {
         hotkey-overlay.title = "Open Screenshot UI";
         action.screenshot = [ ];
@@ -400,7 +404,7 @@
 
       "Mod+V".action.toggle-window-floating = [ ];
       "Mod+Shift+V".action.switch-focus-between-floating-and-tiling = [ ];
-      "Mod+W".action.toggle-column-tabbed-display = [ ];
+      "Mod+T".action.toggle-column-tabbed-display = [ ];
 
       "Mod+Escape" = {
         allow-inhibiting = false;
