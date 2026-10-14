@@ -4,6 +4,9 @@
     prismlauncher
     olympus
     lutris
+    winetricks
+    protonup-qt
+    wine
     (retroarch.withCores (
       cores: with cores; [
         mgba

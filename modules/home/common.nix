@@ -31,10 +31,6 @@
         "--layout=reverse"
       ];
     };
-    direnv = {
-      enable = true;
-      nix-direnv.enable = true;
-    };
   };
 
   home.packages = with pkgs; [
@@ -48,7 +44,6 @@
     koreader
     kcc
     (bottles.override { removeWarningPopup = true; })
-    (discord.override { withVencord = true; })
 
     # nix cli
     statix

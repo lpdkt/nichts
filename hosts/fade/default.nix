@@ -44,6 +44,7 @@
         ./../../modules/home/desktop
         ./../../modules/home/browser.nix
         ./../../modules/home/common.nix
+        ./../../modules/home/direnv.nix
         ./../../modules/home/email.nix
         ./../../modules/home/fish.nix
         ./../../modules/home/git.nix

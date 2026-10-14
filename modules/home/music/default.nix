@@ -43,6 +43,6 @@
     abcde
     sacad
     streamrip
-    qbz
+    sone
   ];
 }
