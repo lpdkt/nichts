@@ -109,10 +109,10 @@
         notifications.hide_when_no_unread = true;
         weather.show_condition = false;
         workspaces = {
-          empty_color = "outline";
+          empty_color = "outline_variant";
           hide_when_empty = true;
           style = "minimal";
-          occupied_color = "outline";
+          occupied_color = "outline_variant";
         };
       };
     };

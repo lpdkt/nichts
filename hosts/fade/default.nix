@@ -49,14 +49,13 @@
         ./../../modules/home/fish.nix
         ./../../modules/home/git.nix
         ./../../modules/home/gpg.nix
-        ./../../modules/home/imv.nix
         ./../../modules/home/mpv.nix
         ./../../modules/home/neovim.nix
         ./../../modules/home/starship.nix
+        ./../../modules/home/swayimg.nix
         ./../../modules/home/tmux.nix
         ./../../modules/home/xdg.nix
         ./../../modules/home/yazi.nix
-        ./../../modules/home/zathura.nix
         ./../../modules/home/zsh.nix
       ];
       programs.niri.settings.outputs."eDP-1" = {

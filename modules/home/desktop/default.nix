@@ -11,6 +11,7 @@
   home.packages = with pkgs; [
     thunar
     thunar-volman
+    xfconf
     tumbler
     ffmpegthumbnailer
     libnotify

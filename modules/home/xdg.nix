@@ -1,3 +1,4 @@
+{ config, lib, ... }:
 {
   xdg = {
     enable = true;
@@ -15,19 +16,21 @@
       videos = "$HOME/videos";
     };
 
+    configFile."mimeapps.list" = lib.mkIf config.xdg.mimeApps.enable { force = true; };
+
     mimeApps =
       let
         associations =
           let
             file-manager = "thunar.desktop";
             editor = "nvim.desktop";
-            browser = "firefox.desktop";
+            browser = "librewolf.desktop";
             video-player = "mpv.desktop";
-            image-viewer = "imv-dir.desktop";
+            image-viewer = "swayimg.desktop";
             music-player = "mpv.desktop";
           in
           {
-            "application/pdf" = [ "org.pwmt.zathura-pdf-mupdf.desktop" ];
+            "application/pdf" = [ "sioyek.desktop" ];
             "image/gif" = [ image-viewer ];
             "image/jpeg" = [ image-viewer ];
             "image/png" = [ image-viewer ];
@@ -38,6 +41,7 @@
             "text/plain" = [ editor ];
             "video/mp4" = [ video-player ];
             "video/webm" = [ video-player ];
+            "video/matroska" = [ video-player ];
             "video/x-matroska" = [ video-player ];
             "audio/mpeg" = [ music-player ];
             "audio/flac" = [ music-player ];

@@ -1,12 +1,12 @@
 { pkgs, ... }:
 {
+  environment.systemPackages = with pkgs; [ pipewire.jack ];
   services = {
     pipewire = {
       enable = true;
       alsa.enable = true;
       alsa.support32Bit = true;
       pulse.enable = true;
-      jack.enable = true;
       wireplumber.enable = true;
       extraConfig.pipewire = {
         "10-clock-rate" = {

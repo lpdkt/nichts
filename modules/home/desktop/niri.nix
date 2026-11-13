@@ -157,8 +157,8 @@
         action.spawn = "thunar";
       };
       "Mod+W" = {
-        hotkey-overlay.title = "Open Browser: firefox";
-        action.spawn = "firefox";
+        hotkey-overlay.title = "Open Browser: librewolf";
+        action.spawn = "librewolf";
       };
       "Mod+Shift+S" = {
         hotkey-overlay.title = "Open Screenshot UI";

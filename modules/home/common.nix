@@ -36,6 +36,8 @@
   home.packages = with pkgs; [
 
     # gui
+    discord
+    sioyek
     gimp
     qbittorrent
     libreoffice

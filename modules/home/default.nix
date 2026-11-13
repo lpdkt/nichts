@@ -10,15 +10,14 @@
     ./gaming.nix
     ./git.nix
     ./gpg.nix
-    ./imv.nix
     ./mpv.nix
     ./neovim.nix
     ./rec.nix
     ./starship.nix
+    ./swayimg.nix
     ./tmux.nix
     ./xdg.nix
     ./yazi.nix
-    ./zathura.nix
     ./zsh.nix
   ];
 }

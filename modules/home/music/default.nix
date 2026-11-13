@@ -41,7 +41,7 @@
     nicotine-plus
     picard
     abcde
-    sacad
+    # sacad
     streamrip
     sone
   ];

@@ -23,15 +23,6 @@
         sort_reverse = false;
         linemode = "none";
       };
-      opener = {
-        open = [
-          {
-            run = "xdg-open \"$@\"";
-            orphan = true;
-            desc = "Open";
-          }
-        ];
-      };
     };
   };
 }

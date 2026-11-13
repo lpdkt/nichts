@@ -23,12 +23,12 @@ shell: `fish + starship` \
 text editor: `neovim` \
 application launcher: `fuzzel` \
 bar: `noctalia` \
-browser: `hardened firefox` \
+browser: `librewolf` \
 file manager: `yazi & thunar` \
 notifications: `noctalia` \
 video player: `mpv` \
-image viewer: `imv` \
-pdf viewer: `zathura` \
+image viewer: `swayimg` \
+pdf viewer: `sioyek` \
 screen recording: `obs` \
 music player: `mpd+rmpc` \
 email: `thunderbird`
